@@ -1,0 +1,41 @@
+version: '3'
+services:
+    php:
+        build: ./docker/php
+        container_name: application
+        ports:
+            - '7070:80'
+        expose:
+            - 7070
+        links:
+            - mariadb:mysql
+        volumes:
+            - .:/var/www/html
+            - ./docker/apache/sites-available:/etc/apache2/sites-available
+        depends_on:
+            - mariadb
+        restart: always
+    mariadb:
+        image: mariadb:10.2.43-bionic
+        container_name: database
+        environment:
+            - TZ=America/Guatemala
+            - MYSQL_DATABASE=pruebaasr
+            - MYSQL_ROOT_PASSWORD=secret123456
+            - MYSQL_USER=devpractice
+            - MYSQL_PASSWORD=pesg12345
+        volumes:
+            - /home/pruebaasr/mariadb:/var/lib/mysql
+        expose:
+            - 3306
+        ports:
+            - 3309:3306
+        restart: always    
+    composer:
+        restart: 'no'
+        image: composer:latest
+        depends_on:
+            - php
+        command: install
+        volumes:
+            - .:/app
