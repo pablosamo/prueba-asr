@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
+use DB;
+use Auth;
+use App\Models\Tag;
 use App\Models\Video;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\VideoRequest;
 
 class VideosController extends Controller
 {
@@ -15,7 +19,7 @@ class VideosController extends Controller
         return response()->json(['videos' => $videos]);
     }
 
-    public function store(PostRequest $request)
+    public function store(VideoRequest $request)
     {
         DB::transaction(function () use ($request) {
             $tags = array();
@@ -33,6 +37,6 @@ class VideosController extends Controller
             $video->tags()->attach($tags);
         });
 
-        return response()->json(['message' => 'Post guardado correctamente']);
+        return response()->json(['message' => 'Vídeo guardado correctamente']);
     }
 }

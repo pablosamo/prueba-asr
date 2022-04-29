@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\PostsController;
-// use App\Http\Controllers\Api\VideosController;
+use App\Http\Controllers\Api\VideosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +25,5 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
 
     Route::resource('posts',PostsController::class)->only(['index','store']);
-    // Route::resource('/videos',[VideosController::class])->only(['index','store']);
+    Route::resource('videos',VideosController::class)->only(['index','store']);
 });
