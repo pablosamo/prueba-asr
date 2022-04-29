@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "f75d4a91-461c-4cd4-a15b-649361260ffb",
+		"name": "Prueba asr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Pablo",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sorfistaweb@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:7070/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "sorfistaweb@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:7070/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYTQ1NTdmYjM0MTgyZDY2OWE3YjUxNGUyZGEwMGQwMjVjZTBiNzAwYzAwMDU2NDMxNzRiYmJkNTljZDBmZWI2YmQ4OTQzMThlZGRlMWU2MDgiLCJpYXQiOjE2NTExOTAyMjQuMzE5MjU4LCJuYmYiOjE2NTExOTAyMjQuMzE5MjY2LCJleHAiOjE2NTExOTM4MjQuMjQ5NjUsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.coAOaVmEqyhs0_XLJWabXYWXgOe4oN8JEs_BVT-TWnBhNtoQKqFTJN0NKTSk5qNTcT2uXHxvdgSQmiz-h1U75fCnUtVEGrAHGVXTnSEYu61M52qT-OPaWmbz-YLAUSUYSEVbI2UH50c9h5vbN_4EO5d-5brL2ndTaap16fTc4BRhHoC073qj-KQ7vKMTCkEU-dSgTPhzLq74JPXljPqW7qlmKF8bm_3BkXT9vX1IfN0RE7PvLL_SiNAvWPkiUbNkiWQkXKWQumqzNVC3ge2pbW_8O4hFRA09zZsE4O4jgYOdiYSDu4Axd7lulqXfZUesxu0rwvVMuBYD0UZUEfD-es1QUw-H6_Wrce-Uydjd9IaA-UcBJHghN8TJ_jfNWd0q47YStSv5nm0N7W3Fa--gI63odLO4e9Q4smkt8HG4nxYjqzGm4eZVSjr2yao_I9ifIEeZ-XdzVcm-902bHsWGMYVFtsXoey6vvKY_lxhIv4Yebe4iC0Wvv9aqMXLXzghMIgIyI_LxhCw360BuHHuUlVTBphX2QIpy3cOhSgGk5OiEgAfCyvbrPPef1H8mgBNYXubKukkzdyKy_iUPRDjX1zP0sAl5j4ojWopGXkV5u-H40FNmhGuZlzNEmD1Fz7aSE_Gdk9VNpnFL0eVRNAMDSdopHXVhBSo2wecxafj1lDE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:7070/api/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYWI2ZDZmZjM5Y2Y4OWNhMTUzMTI0Y2ViZjg3NjE0ZWMzNjk5YjNiYTJiZjMyZjc4NGZiYTQ2OWYzNmQyZjk2YWJkOGJkMTA2ODUyY2U0MmUiLCJpYXQiOjE2NTExOTUwNzcuMzg0MDAyLCJuYmYiOjE2NTExOTUwNzcuMzg0MDA1LCJleHAiOjE2NTExOTg2NzcuMDkxMjk5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x-H1QcrVE5CVjNMCWlU0w2SMsnk6u4m19pCH5rw27gGoau_IJaPLOS488jBJczntPnRt3LSC_HrhPVerHeXt_0yNRXdnCBeW4DJoLxhcFsy8dwq7Eey8C1U7t5o3-YzUkr1503W17HxovG713mBJI2cW-dG-OP6_JiZjLlujAww4YqeS9GMYRqiLVgcc6ZA4xTtqcWxtKP1t7zhLiLeo33f44CHR2m_wkdUbtLJyRRDlprtlVampr6myohtWIY-W44oUkyZC6CVlUIXghuQa1qUJbm-qEKqSLdIAkWzSyNW6LS1MIvLqN2pfp-U18Q_tKJn2EpoJCVtwaVx9rf6Vq2uxi3SgJE56tB0qBtse7PJEKd9Tnb43-WLkfrUrlknCheDe22D9qrgGWsDmIQZZqNPHHHrZqDJHlqZS6gaMONUWeOjEjsWkkPnbsRi--xq-oFqhu7Rzob59GtTgNRnz0ng-Cj5YHj7dr-O470kDSnatkc_XqyzOMvgg1Y44IkRPDxsSjHPMYWfltVUuqH_1dfaEW4JnpXA1YYjrKXKSgozlUXRxNs7tMgJMseMwuKARUqLb-OBaKz_2d0lwRAvwfO3BcqgHmDT4dk0iahwk7oFOCh8I3VfrnOjE6hmOHwcUfDYtbL5m_rnzFJWXG9sJeZK1rjksHXPTCtTbT93RnCs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Primer post",
+							"type": "text"
+						},
+						{
+							"key": "extract",
+							"value": "Otrop post de prueba",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in rhoncus neque, eget fermentum purus. Nulla lorem sapien, vulputate non ligula quis, auctor pharetra enim. Morbi lacinia at quam vitae commodo. Etiam vitae mauris at felis pulvinar rhoncus. Vivamus hendrerit fermentum ipsum, vitae mollis mauris vulputate dignissim.",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "tags[]",
+							"value": "mi tag",
+							"type": "text"
+						},
+						{
+							"key": "tags[]",
+							"value": "prueba",
+							"type": "text"
+						},
+						{
+							"key": "tags[]",
+							"value": "breve",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:7070/api/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiNjM1MjM1YjA4ZjUzZTNiMTgyZWEwMWU5YTFkYWFlZDNlN2ZlOGNhMzJkYTVkMGE0MWY5MDFhNTVjYjRkNTc0MWZjN2E2NzBlN2RhNzA2NWMiLCJpYXQiOjE2NTExOTA0OTEuNTg0Nzk2LCJuYmYiOjE2NTExOTA0OTEuNTg0ODE2LCJleHAiOjE2NTExOTQwOTEuNTA3NDE0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Vz3aLFuyRVKJtLjEfXEz6roEXcfKcaufbP1o9yI8nzhCpUoF2MFhYz0cPBEtOmZVN6oLWVQund4Uv6zsh0Opw0iL0fanVAK7UkqxhEifanAr8H_6rLCAwfVnnksIKq3DYpzr5mzm8Gn0wwapy543lz_Ipk5FPj7SEI4L6XocVel_WlfCyMKkAhRkhQOtJbYEWuwSv8-SMQD2yB3UvETFaZr7W9UXB77xOKq21VbPl-7FqAaVTbLcLT3esboxDWmXYLxW138Bbz9XIxrKvQYH3Mu6PBrsMXT0uscnqvNNp7CtHiyysUVdVpfX1orpZ7e9baNbrZv7kPBd7ioB9-kB8xbTsbgdmKvkTBI7YKGJBJWcXaS1w58w4J5VkzXW7Gw1kAxkUFCiVrEu80vk6xcNsKxpq47tk_0GkY-aMAEeXevneFVt6gL0-Ol8cK5puB18E84uqN4cvjTVtdntC0Og26iCi-huiS_1EL92AhDrPsDCt41_V9XwgDx_r5UU0la1d3wBMxKNTaciHRNhhqefP-KQNcF548AYEmU32g6Sgt8w5GBiLRyZ8Fo7ToOsJhVi0fMb87NVUHtsfy7upyVPEfyE52yIYyrW1-mIvCHz_aQi6oyUq2LsYK9FEOx2iA1N5X2lbV38oeCmxqUZNGUYX-miFxtlnxbqyNj7lSPDw1k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:7070/api/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear video",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYWI2ZDZmZjM5Y2Y4OWNhMTUzMTI0Y2ViZjg3NjE0ZWMzNjk5YjNiYTJiZjMyZjc4NGZiYTQ2OWYzNmQyZjk2YWJkOGJkMTA2ODUyY2U0MmUiLCJpYXQiOjE2NTExOTUwNzcuMzg0MDAyLCJuYmYiOjE2NTExOTUwNzcuMzg0MDA1LCJleHAiOjE2NTExOTg2NzcuMDkxMjk5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x-H1QcrVE5CVjNMCWlU0w2SMsnk6u4m19pCH5rw27gGoau_IJaPLOS488jBJczntPnRt3LSC_HrhPVerHeXt_0yNRXdnCBeW4DJoLxhcFsy8dwq7Eey8C1U7t5o3-YzUkr1503W17HxovG713mBJI2cW-dG-OP6_JiZjLlujAww4YqeS9GMYRqiLVgcc6ZA4xTtqcWxtKP1t7zhLiLeo33f44CHR2m_wkdUbtLJyRRDlprtlVampr6myohtWIY-W44oUkyZC6CVlUIXghuQa1qUJbm-qEKqSLdIAkWzSyNW6LS1MIvLqN2pfp-U18Q_tKJn2EpoJCVtwaVx9rf6Vq2uxi3SgJE56tB0qBtse7PJEKd9Tnb43-WLkfrUrlknCheDe22D9qrgGWsDmIQZZqNPHHHrZqDJHlqZS6gaMONUWeOjEjsWkkPnbsRi--xq-oFqhu7Rzob59GtTgNRnz0ng-Cj5YHj7dr-O470kDSnatkc_XqyzOMvgg1Y44IkRPDxsSjHPMYWfltVUuqH_1dfaEW4JnpXA1YYjrKXKSgozlUXRxNs7tMgJMseMwuKARUqLb-OBaKz_2d0lwRAvwfO3BcqgHmDT4dk0iahwk7oFOCh8I3VfrnOjE6hmOHwcUfDYtbL5m_rnzFJWXG9sJeZK1rjksHXPTCtTbT93RnCs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Videotutorial",
+							"type": "text"
+						},
+						{
+							"key": "tags[]",
+							"value": "tutorial",
+							"type": "text"
+						},
+						{
+							"key": "tags[]",
+							"value": "programacion",
+							"type": "text"
+						},
+						{
+							"key": "tags[]",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:7070/api/videos",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer videos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYWI2ZDZmZjM5Y2Y4OWNhMTUzMTI0Y2ViZjg3NjE0ZWMzNjk5YjNiYTJiZjMyZjc4NGZiYTQ2OWYzNmQyZjk2YWJkOGJkMTA2ODUyY2U0MmUiLCJpYXQiOjE2NTExOTUwNzcuMzg0MDAyLCJuYmYiOjE2NTExOTUwNzcuMzg0MDA1LCJleHAiOjE2NTExOTg2NzcuMDkxMjk5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x-H1QcrVE5CVjNMCWlU0w2SMsnk6u4m19pCH5rw27gGoau_IJaPLOS488jBJczntPnRt3LSC_HrhPVerHeXt_0yNRXdnCBeW4DJoLxhcFsy8dwq7Eey8C1U7t5o3-YzUkr1503W17HxovG713mBJI2cW-dG-OP6_JiZjLlujAww4YqeS9GMYRqiLVgcc6ZA4xTtqcWxtKP1t7zhLiLeo33f44CHR2m_wkdUbtLJyRRDlprtlVampr6myohtWIY-W44oUkyZC6CVlUIXghuQa1qUJbm-qEKqSLdIAkWzSyNW6LS1MIvLqN2pfp-U18Q_tKJn2EpoJCVtwaVx9rf6Vq2uxi3SgJE56tB0qBtse7PJEKd9Tnb43-WLkfrUrlknCheDe22D9qrgGWsDmIQZZqNPHHHrZqDJHlqZS6gaMONUWeOjEjsWkkPnbsRi--xq-oFqhu7Rzob59GtTgNRnz0ng-Cj5YHj7dr-O470kDSnatkc_XqyzOMvgg1Y44IkRPDxsSjHPMYWfltVUuqH_1dfaEW4JnpXA1YYjrKXKSgozlUXRxNs7tMgJMseMwuKARUqLb-OBaKz_2d0lwRAvwfO3BcqgHmDT4dk0iahwk7oFOCh8I3VfrnOjE6hmOHwcUfDYtbL5m_rnzFJWXG9sJeZK1rjksHXPTCtTbT93RnCs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:7070/api/videos",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
